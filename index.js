@@ -4,7 +4,7 @@ import { Server } from 'socket.io'
 const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 const colorOptions = ['red', 'white', 'rose', 'green', 'yellow', 'orange', 'magenta', ''];
 
-const io = new Server(8080);
+const io = new Server(8080, {cors: {origin: "*"}});
 const rooms = new Map();
 const playersRoomSize = 2;
 
