@@ -1,6 +1,5 @@
 import { Server } from 'socket.io'
 
-
 const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 const colorOptions = ['red', 'white', 'rose', 'green', 'yellow', 'orange', 'magenta', ''];
 
@@ -195,17 +194,6 @@ io.on('connection', async (socket) => {
     }
   })
 });
-
-// Room Layout
-// roomCode: {
-//   correctOrder: [ 'purple', 'orange', 'red', 'green', 'white' ],
-//   currentOrder: [ 'white', 'green', 'purple', 'orange', 'red' ],
-//   players: [
-//     [ 'uuid', {name: 'John Doe', score: 2} ],
-//     [ 'uuid', {name: 'Jane Doe', score: 3} ],
-//     ...
-//   ]
-// }
 
 function generateRoomCode() {
   let result = '';
